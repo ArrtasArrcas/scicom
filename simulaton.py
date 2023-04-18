@@ -1,8 +1,7 @@
 import nbody
-import visualization
 import solar_bodies
 import numpy as np
-import anim_plot
+import anime_plot
 import spaß_mit_asteroiden
 import matplotlib.pyplot as plt
 
@@ -35,4 +34,4 @@ pos = preset[0]
 print(preset) 
 newt = nbody.nbody(*preset, step, n*step)"""
 
-anim_plot.plotting(spaß_mit_asteroiden.sim)
+anime_plot.plotting(spaß_mit_asteroiden.sim)

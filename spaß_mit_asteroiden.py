@@ -19,8 +19,8 @@ all_pos = np.concatenate((solar_bodies_pos, asteroid_pos), axis=0)
 all_vel = np.concatenate((solar_bodies_vel, asteroid_vel), axis=0)
 all_mas = np.concatenate((solar_bodies_mas, asteroid_mas))
 
-dt = 86400
-t_t = 31536000*10
+dt = 1800/4
+t_t = 31536000/4
 
 
 sim = nbody.nbody(all_pos, all_vel, all_mas, None, dt, t_t)     # 6-dim array aus pos und vel
@@ -78,7 +78,7 @@ for i in range(int(t_t/dt)):
 #print(val_9)
 
 
-#plt.plot(range(int(t_t/dt)), val_0, label="sun") #verändert sich kaum
+plt.plot(range(int(t_t/dt)), val_0, label="sun")
 plt.plot(range(int(t_t/dt)), val_1, label="mercury")
 plt.plot(range(int(t_t/dt)), val_2, label="venus")
 plt.plot(range(int(t_t/dt)), val_3, label="earth")

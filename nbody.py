@@ -1,7 +1,7 @@
 import numpy as np
 from functools import partial
 from astropy import constants as const
-from scicom.rk4 import rk4_integration
+from rk4 import rk4_integration
 import matplotlib.pyplot as plt
 
 
