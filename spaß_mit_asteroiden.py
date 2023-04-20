@@ -88,6 +88,7 @@ plt.plot(range(int(t_t/dt)), val_6, label="jupiter")
 plt.plot(range(int(t_t/dt)), val_7, label="saturn")
 plt.plot(range(int(t_t/dt)), val_8, label="uranus")
 plt.plot(range(int(t_t/dt)), val_9, label="neptune")
-
+plt.xlabel("timestep dt")
+plt.ylabel("distance to sun in m")
 plt.legend(loc="upper right")
 plt.show()

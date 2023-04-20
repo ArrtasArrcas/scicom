@@ -14,14 +14,21 @@ def plotting(series):
 
     scatter_plot = ax.scatter(first[:, 0], first[:, 1], first[:, 2])
 
+    texts = []
+
+    for x, y, z, label in zip(first[:, 0], first[:, 1], first[:, 2], ["sun", "mercury", "venus", "earth", "moon", "mars", "jupiter", "saturn", "uranus", "neptune"]):
+        texts.append(ax.text(x, y, z, label))
+
     ani = animation.FuncAnimation(fig, update,
                                   frames=gen,
-                                  fargs=(scatter_plot, ax),
+                                  fargs=(scatter_plot, texts, ax),
                                   repeat=True,
                                   interval=0.05)
 
     plt.show()
 
 
-def update(frame, plot_sim, axis):
+def update(frame, plot_sim, texts, axis):
     plot_sim._offsets3d = frame[:, :3].T
+    for i, text in enumerate(texts):
+        text.set_position(frame[i, :3])
