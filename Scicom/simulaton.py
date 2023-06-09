@@ -1,9 +1,5 @@
-import nbody
-import solar_bodies
-import numpy as np
 import anime_plot
 import spaß_mit_asteroiden
-import matplotlib.pyplot as plt
 
 """bodies = ["earth", "sun", "moon"] 
 preset = test_bodies.solar_system 
