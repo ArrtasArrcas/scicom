@@ -16,7 +16,16 @@ def plotting(series):
 
     texts = []
 
-    for x, y, z, label in zip(first[:, 0], first[:, 1], first[:, 2], ["sun", "mercury", "venus", "earth", "moon", "mars", "jupiter", "saturn", "uranus", "neptune"]):
+    for x, y, z, label in zip(first[:, 0], first[:, 1], first[:, 2], ["sun",
+                                                                      "mercury",
+                                                                      "venus",
+                                                                      "earth",
+                                                                      "moon",
+                                                                      "mars",
+                                                                      "jupiter",
+                                                                      "saturn",
+                                                                      "uranus",
+                                                                      "neptune"]):
         texts.append(ax.text(x, y, z, label))
 
     ani = animation.FuncAnimation(fig, update,
