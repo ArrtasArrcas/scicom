@@ -1,6 +1,7 @@
 import numpy as np
 import nbody
 import solar_bodies
+import anime_plot
 from astropy import units
 import matplotlib.pyplot as plt
 
@@ -92,3 +93,5 @@ plt.xlabel("timestep dt")
 plt.ylabel("distance to sun in m")
 plt.legend(loc="upper right")
 plt.show()
+
+anime_plot.plotting(sim)

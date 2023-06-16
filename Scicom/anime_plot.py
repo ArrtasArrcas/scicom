@@ -32,7 +32,7 @@ def plotting(series):
                                   frames=gen,
                                   fargs=(scatter_plot, texts, ax),
                                   repeat=True,
-                                  interval=0.05)
+                                  interval=0.01)
 
     plt.show()
 
